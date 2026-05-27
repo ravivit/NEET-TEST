@@ -1,131 +1,1450 @@
+
 const QUESTIONS = [
-  // ===== CELL THEORY & DISCOVERY (PYQ) =====
-  {q:"The cell theory was proposed by",opts:["Schleiden and Schwann","Virchow","Robert Hooke","Louis Pasteur"],ans:0,sol:"Cell theory (1838–39) was proposed by Matthias Schleiden (plants) and Theodor Schwann (animals). Virchow later added 'cells arise from pre-existing cells'.",topic:"Cell Theory",year:"PYQ"},
-  {q:"Who first observed and described a live cell?",opts:["Robert Brown","Antonie van Leeuwenhoek","Robert Hooke","Theodor Schwann"],ans:1,sol:"Leeuwenhoek used his improved microscope to observe living microorganisms in pond water (1674). Hooke observed dead cork cells in 1665.",topic:"Cell Theory",year:"PYQ"},
-  {q:"The term 'protoplasm' was coined by",opts:["Robert Hooke","Johannes Purkinje","Schleiden","Virchow"],ans:1,sol:"Johannes Purkinje (1840) coined the term 'protoplasm' for the living content of cells. It includes cytoplasm + nucleus.",topic:"Cell Theory",year:"PYQ"},
-  {q:"Omnis cellula e cellula was stated by",opts:["Schleiden","Schwann","Virchow","Hooke"],ans:2,sol:"Rudolf Virchow (1855) stated 'Omnis cellula e cellula' — all cells arise from pre-existing cells. This completed the cell theory.",topic:"Cell Theory",year:"PYQ"},
 
-  // ===== PROKARYOTIC CELL =====
-  {q:"Which of the following is NOT a feature of prokaryotic cells?",opts:["Ribosomes present","Nuclear membrane absent","Cell wall present","Membrane-bound organelles present"],ans:3,sol:"Prokaryotes lack membrane-bound organelles. They have ribosomes (70S), cell wall, and no nuclear membrane. NCERT Class 11 Ch.8",topic:"Prokaryotic Cell",year:"PYQ"},
-  {q:"Mycoplasma is unique because it",opts:["Has no ribosomes","Lacks cell wall","Lacks DNA","Has 80S ribosomes"],ans:1,sol:"Mycoplasma lacks cell wall — smallest known living organism. Hence pleomorphic (variable shape) and resistant to penicillin.",topic:"Prokaryotic Cell",year:"PYQ"},
-  {q:"Which structure is responsible for conjugation in bacteria?",opts:["Flagella","Pili","Capsule","Mesosome"],ans:1,sol:"Pili (sex pili) facilitate conjugation — transfer of genetic material between bacteria. Flagella = motility. Capsule = protection.",topic:"Prokaryotic Cell",year:"PYQ"},
-  {q:"Assertion: Mycoplasma are the smallest living organisms. Reason: They lack cell wall.",opts:["Both A and R true, R explains A","Both true, R does not explain A","A true, R false","A false, R true"],ans:0,sol:"Mycoplasma are smallest self-replicating organisms, lack cell wall (hence pleomorphic). R correctly explains their smallness and flexibility.",topic:"Prokaryotic Cell",year:"Predicted"},
-  {q:"Mesosomes in bacteria are associated with",opts:["Protein synthesis","DNA replication and respiration","Cell wall synthesis","Flagella movement"],ans:1,sol:"Mesosomes are infoldings of plasma membrane in bacteria. Associated with DNA replication, respiration, and cell wall formation during division.",topic:"Prokaryotic Cell",year:"PYQ"},
-  {q:"70S ribosomes are found in",opts:["Prokaryotes only","Eukaryotes only","Prokaryotes, mitochondria, and chloroplasts","Only in chloroplasts"],ans:2,sol:"70S ribosomes are in prokaryotes, mitochondria (50S+30S subunits), and chloroplasts. Eukaryotic cytoplasm has 80S ribosomes.",topic:"Ribosomes",year:"PYQ"},
+{
+q:`Read the following statements regarding plasma membrane:
 
-  // ===== CELL MEMBRANE =====
-  {q:"The fluid mosaic model of plasma membrane was given by",opts:["Watson and Crick","Singer and Nicolson","Davson and Danielli","Robertson"],ans:1,sol:"Singer and Nicolson (1972) proposed the fluid mosaic model — phospholipid bilayer with floating proteins (peripheral + integral).",topic:"Cell Membrane",year:"PYQ"},
-  {q:"The unit membrane concept was given by",opts:["Singer","Robertson","Davson","Gorter"],ans:1,sol:"Robertson (1959) proposed the unit membrane model — trilaminar structure (dark-light-dark) seen under electron microscope.",topic:"Cell Membrane",year:"PYQ"},
-  {q:"Phospholipid bilayer — which part faces aqueous environment?",opts:["Fatty acid tails","Phosphate heads","Both equally","Neither"],ans:1,sol:"Phospholipids are amphipathic. Hydrophilic phosphate heads face water (extracellular and cytoplasmic). Hydrophobic tails face inward.",topic:"Cell Membrane",year:"PYQ"},
-  {q:"In animal cells, cell coat (glycocalyx) is made of",opts:["Cellulose","Glycoproteins and glycolipids","Chitin","Peptidoglycan"],ans:1,sol:"Glycocalyx in animal cells = glycoproteins + glycolipids. Functions in cell recognition, adhesion, immune response, protection.",topic:"Cell Membrane",year:"Predicted"},
-  {q:"Plasmolysis occurs when cell is placed in",opts:["Hypotonic solution","Hypertonic solution","Isotonic solution","Pure water"],ans:1,sol:"Plasmolysis: cell in hypertonic solution → water moves out by osmosis → protoplast shrinks away from cell wall.",topic:"Cell Membrane",year:"PYQ"},
+A. Cholesterol is absent in most prokaryotic plasma membranes.
+B. Flip-flop movement of lipids across membrane is rare.
+C. Peripheral proteins are partially embedded in lipid bilayer.
+D. Glycocalyx helps in cell recognition.
 
-  // ===== CELL WALL =====
-  {q:"Middle lamella is composed of",opts:["Cellulose","Calcium pectate","Suberin","Lignin"],ans:1,sol:"Middle lamella = calcium pectate. It glues adjacent plant cells together. Pectin is its main component.",topic:"Cell Wall",year:"PYQ"},
-  {q:"The primary cell wall of plants is mainly composed of",opts:["Lignin","Cellulose","Chitin","Peptidoglycan"],ans:1,sol:"Primary cell wall = cellulose + hemicellulose + pectin. Secondary wall may contain lignin. Bacterial wall = peptidoglycan.",topic:"Cell Wall",year:"PYQ"},
-  {q:"Which of the following is CORRECT about cell wall of fungi?",opts:["Made of cellulose","Made of chitin","Made of peptidoglycan","Absent in fungi"],ans:1,sol:"Fungal cell wall = chitin (polymer of N-acetylglucosamine). Plant = cellulose. Bacteria = peptidoglycan.",topic:"Cell Wall",year:"PYQ"},
-  {q:"Plasmodesmata are",opts:["Pores in nuclear membrane","Cytoplasmic connections between plant cells","Cavities in cell wall","Extensions of plasma membrane"],ans:1,sol:"Plasmodesmata are cytoplasmic channels (lined with plasma membrane) connecting adjacent plant cells through cell walls, enabling communication.",topic:"Cell Wall",year:"PYQ"},
-  {q:"Protoplast refers to",opts:["Cell without nucleus","Cell without cell wall","Cell without mitochondria","Dead cell"],ans:1,sol:"Protoplast = plant cell with cell wall removed (by cellulase/pectinase enzymes). Used in somatic hybridization and genetic engineering.",topic:"Cell Wall",year:"Predicted"},
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"B and C only",
+"A and C only",
+"A, B, C and D"
+],
+ans:0,
+sol:"Peripheral proteins are loosely attached on membrane surface.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
 
-  // ===== NUCLEUS =====
-  {q:"Which of the following statements about nucleus is CORRECT?",opts:["All cells have nucleus throughout life","RBCs of mammals have large nucleus","Nucleus contains RNA only","Nuclear envelope has two membranes"],ans:3,sol:"Nuclear envelope = two membranes (outer + inner) with nuclear pores. Mature mammalian RBCs have no nucleus. Nucleus has DNA+RNA+proteins.",topic:"Nucleus",year:"PYQ"},
-  {q:"Nucleolus is rich in",opts:["DNA only","RNA and proteins","Lipids","Carbohydrates"],ans:1,sol:"Nucleolus is the site of rRNA synthesis and ribosome assembly. Rich in rRNA and proteins. Disappears during cell division.",topic:"Nucleus",year:"PYQ"},
-  {q:"The nucleosome consists of DNA wrapped around",opts:["2 copies each of H1, H2A, H2B, H3","2 copies each of H2A, H2B, H3, H4","1 copy of all 5 histones","H1 histone only"],ans:1,sol:"Nucleosome core = 8 histone proteins (2 each of H2A, H2B, H3, H4). H1 is linker histone, sits outside the core particle.",topic:"Nucleus",year:"Predicted"},
-  {q:"Heterochromatin is",opts:["Loosely packed, transcriptionally active","Densely packed, transcriptionally inactive","Loosely packed, inactive","Densely packed, active"],ans:1,sol:"Heterochromatin = densely packed, gene-poor, transcriptionally inactive. Euchromatin = loosely packed, active. Barr body = condensed heterochromatin.",topic:"Nucleus",year:"PYQ"},
-  {q:"The site of ribosome synthesis is",opts:["Cytoplasm","Nucleolus","Smooth ER","Golgi body"],ans:1,sol:"Nucleolus is the site of rRNA synthesis and ribosome subunit assembly. Ribosomal proteins made in cytoplasm and imported to nucleolus.",topic:"Nucleus",year:"PYQ"},
-  {q:"Nucleosome packaging level from DNA to chromosome:",opts:["DNA→Nucleosome→30nm fiber→Looped domains→Chromosome","DNA→Chromosome→Nucleosome→Chromatin","DNA→Looped domains→Nucleosome→Chromosome","Random condensation"],ans:0,sol:"Hierarchical packaging: DNA (2nm) → Nucleosome (10nm) → 30nm fiber → Looped domains (300nm) → 700nm → Metaphase chromosome (1400nm).",topic:"Nucleus",year:"Predicted"},
+{
+q:`Assertion (A): Mycoplasma can survive without cell wall.
+Reason (R): Sterols are present in plasma membrane of Mycoplasma.`,
+opts:[
+"Both A and R are true and R explains A",
+"Both true but R does not explain A",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Sterols provide membrane rigidity in absence of cell wall.",
+topic:"Prokaryotic Cell",
+year:"PYQ Inspired"
+},
 
-  // ===== MITOCHONDRIA =====
-  {q:"Which organelle is called the 'powerhouse of the cell'?",opts:["Nucleus","Ribosome","Mitochondria","Golgi apparatus"],ans:2,sol:"Mitochondria synthesize ATP via oxidative phosphorylation — hence 'powerhouse'. Contain their own circular DNA and 70S ribosomes.",topic:"Mitochondria",year:"PYQ"},
-  {q:"Cristae are found in",opts:["Chloroplasts","Mitochondria","Nucleus","Endoplasmic reticulum"],ans:1,sol:"Cristae are infoldings of the inner mitochondrial membrane. They increase surface area for ATP synthesis (respiratory chain proteins).",topic:"Mitochondria",year:"PYQ"},
-  {q:"Which of the following is a semi-autonomous organelle?",opts:["Lysosome","Ribosome","Mitochondria","Golgi body"],ans:2,sol:"Mitochondria (and chloroplasts) are semi-autonomous — have their own circular DNA and 70S ribosomes, can self-replicate to some extent.",topic:"Mitochondria",year:"PYQ"},
-  {q:"Which statement is INCORRECT about mitochondria?",opts:["They have circular DNA","Outer membrane is permeable","They contain 80S ribosomes","Inner membrane forms cristae"],ans:2,sol:"Mitochondria have 70S ribosomes (not 80S). Outer membrane is permeable, inner has cristae, DNA is circular like bacteria.",topic:"Mitochondria",year:"Predicted"},
-  {q:"Which of the following is a feature of inner mitochondrial membrane?",opts:["Permeable to all molecules","Contains ATP synthase","Lacks proteins","Smooth without folds"],ans:1,sol:"Inner mitochondrial membrane contains ATP synthase (Complex V), respiratory chain complexes. It is impermeable and forms cristae.",topic:"Mitochondria",year:"PYQ"},
-  {q:"Endosymbiont theory proposes that mitochondria originated from",opts:["Nucleus","Endoplasmic reticulum","Engulfed aerobic bacteria","Golgi apparatus"],ans:2,sol:"Lynn Margulis proposed endosymbiont theory — mitochondria from engulfed alpha-proteobacteria. Evidence: circular DNA, 70S ribosomes, double membrane.",topic:"Mitochondria",year:"Predicted"},
+{
+q:`Match the following:
 
-  // ===== CHLOROPLAST =====
-  {q:"Thylakoids are found in",opts:["Mitochondria","Chloroplasts","Lysosomes","Nucleus"],ans:1,sol:"Thylakoids are flattened disc-like membrane sacs in chloroplasts arranged in stacks called grana. Site of light-dependent reactions.",topic:"Chloroplast",year:"Predicted"},
-  {q:"Which of the following organelles is associated with photorespiration?",opts:["Mitochondria only","Chloroplasts only","Peroxisomes, chloroplasts, mitochondria","Peroxisomes only"],ans:2,sol:"Photorespiration involves all three: chloroplasts (RuBisCO oxygenase reaction), peroxisomes (glycolate oxidation), mitochondria (decarboxylation).",topic:"Chloroplast",year:"Predicted"},
+List I
+A. Cristae
+B. Grana
+C. Tonoplast
+D. Dictyosome
 
-  // ===== ENDOPLASMIC RETICULUM =====
-  {q:"Which type of endoplasmic reticulum is continuous with nuclear envelope?",opts:["Smooth ER","Rough ER","Both equally","Neither"],ans:1,sol:"Rough ER (with ribosomes) is continuous with the outer nuclear membrane. Important for co-translational secretory protein synthesis.",topic:"Endoplasmic Reticulum",year:"PYQ"},
-  {q:"Which of the following is a correct statement about smooth ER?",opts:["It has ribosomes","It synthesizes proteins","It is involved in lipid synthesis","It forms nuclear envelope"],ans:2,sol:"Smooth ER lacks ribosomes. Involved in lipid/steroid synthesis, detoxification (in liver), and calcium storage (in muscle cells).",topic:"Endoplasmic Reticulum",year:"Predicted"},
-  {q:"Signal recognition particle (SRP) is involved in",opts:["DNA replication","Protein targeting to ER","Lipid synthesis","ATP synthesis"],ans:1,sol:"SRP recognizes the signal peptide on a ribosome and directs the ribosome to rough ER for co-translational protein insertion/secretion.",topic:"Endoplasmic Reticulum",year:"Predicted"},
-  {q:"Which organelle is involved in detoxification in liver cells?",opts:["Lysosome","Smooth ER","Rough ER","Peroxisome"],ans:1,sol:"Smooth ER in liver hepatocytes contains cytochrome P450 enzymes for drug/alcohol detoxification. Peroxisomes also contribute.",topic:"Endoplasmic Reticulum",year:"Predicted"},
+List II
+I. Vacuolar membrane
+II. Golgi bodies in plants
+III. Stack of thylakoids
+IV. Infoldings of inner mitochondrial membrane`,
+opts:[
+"A-IV, B-III, C-I, D-II",
+"A-II, B-IV, C-I, D-III",
+"A-IV, B-I, C-II, D-III",
+"A-I, B-II, C-IV, D-III"
+],
+ans:0,
+sol:"Correct matching of organelles.",
+topic:"Cell Organelles",
+year:"Predicted"
+},
 
-  // ===== GOLGI APPARATUS =====
-  {q:"Lysosomes are formed by",opts:["Mitochondria","Rough ER","Golgi apparatus","Smooth ER"],ans:2,sol:"Lysosomes are formed by Golgi apparatus. Hydrolytic enzymes are synthesized in rough ER, sent to Golgi, then packaged into lysosomes.",topic:"Golgi Apparatus",year:"PYQ"},
-  {q:"The 'cis' face of Golgi apparatus faces",opts:["Plasma membrane","ER","Nucleus","Vacuole"],ans:1,sol:"Cis face of Golgi = receiving face, faces endoplasmic reticulum. Trans face = secretory/maturing face, faces plasma membrane.",topic:"Golgi Apparatus",year:"PYQ"},
-  {q:"Which of the following is NOT a function of Golgi apparatus?",opts:["Glycosylation of proteins","Formation of lysosomes","ATP synthesis","Secretion and packaging"],ans:2,sol:"Golgi: modifies (glycosylation), packages, sorts proteins/lipids, forms lysosomes, secretes. ATP synthesis occurs in mitochondria.",topic:"Golgi Apparatus",year:"Predicted"},
+{
+q:`Which of the following statements are correct regarding mitochondria?
 
-  // ===== LYSOSOMES =====
-  {q:"Which cell organelle is responsible for intracellular digestion?",opts:["Peroxisome","Lysosome","Vacuole","Glyoxysome"],ans:1,sol:"Lysosomes contain 40+ hydrolytic enzymes (proteases, lipases, nucleases) active at pH ~5 for intracellular digestion (autophagy).",topic:"Lysosomes",year:"PYQ"},
-  {q:"The 'suicidal bags' of the cell are",opts:["Mitochondria","Lysosomes","Peroxisomes","Vacuoles"],ans:1,sol:"Lysosomes called 'suicidal bags' — contain hydrolytic enzymes that can digest cell contents if membrane ruptures (autolysis). Named by de Duve.",topic:"Lysosomes",year:"PYQ"},
+A. Matrix contains circular DNA.
+B. ATP synthase particles occur on cristae.
+C. Mitochondria contain 80S ribosomes.
+D. Inner membrane is selectively permeable.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and D only",
+"All are correct"
+],
+ans:0,
+sol:"Mitochondria possess 70S ribosomes.",
+topic:"Mitochondria",
+year:"Predicted"
+},
 
-  // ===== VACUOLES =====
-  {q:"Tonoplast is the membrane surrounding",opts:["Chloroplast","Central vacuole","Mitochondria","Nucleus"],ans:1,sol:"Tonoplast = membrane of central vacuole in plant cells. Maintains turgor pressure, stores ions, metabolites, and pigments.",topic:"Vacuoles",year:"Predicted"},
-  {q:"Stomata opening and closing involves",opts:["Nucleus","Mitochondria","Central vacuole of guard cells","Chloroplast only"],ans:2,sol:"Guard cell vacuole changes turgor — ion (K⁺) accumulation causes water entry (stomata open), exit closes them.",topic:"Vacuoles",year:"Predicted"},
+{
+q:`Read the following carefully:
 
-  // ===== RIBOSOMES =====
-  {q:"Which of the following correctly describes a eukaryotic ribosome?",opts:["70S — 30S+50S subunits","80S — 40S+60S subunits","80S — 30S+50S","70S — 40S+60S"],ans:1,sol:"Eukaryotic ribosome: 80S = 40S (small) + 60S (large) subunits. Prokaryotic: 70S = 30S + 50S. Mitochondrial = 70S.",topic:"Ribosomes",year:"PYQ"},
+A. SER detoxifies drugs and poisons.
+B. RER synthesizes secretory proteins.
+C. Golgi body modifies glycoproteins.
+D. Lysosomes synthesize ATP.
 
-  // ===== CENTRIOLES & CYTOSKELETON =====
-  {q:"Centrioles are absent in",opts:["Animal cells","Higher plant cells","Algae","Fungi"],ans:1,sol:"Higher plant cells (angiosperms) lack centrioles. They form spindle without asters — anastral spindle. Lower plants, algae, fungi may have them.",topic:"Centrioles",year:"PYQ"},
-  {q:"Which of the following is INCORRECT about centrioles?",opts:["Made of tubulin","Show 9+0 arrangement","Show 9+2 arrangement","Involved in spindle formation"],ans:2,sol:"Centrioles show 9+0 triplet arrangement (9 triplets, no central pair). Cilia/flagella show 9+2 arrangement. Both made of tubulin.",topic:"Centrioles",year:"PYQ"},
-  {q:"Microtubules are made of",opts:["Actin","Tubulin","Myosin","Keratin"],ans:1,sol:"Microtubules = polymerized tubulin proteins (alpha and beta tubulin dimers). Part of cytoskeleton, spindle fibers, cilia, flagella.",topic:"Cytoskeleton",year:"PYQ"},
-  {q:"Which of the following is NOT a component of cytoskeleton?",opts:["Microtubules","Microfilaments","Intermediate filaments","Microvilli"],ans:3,sol:"Cytoskeleton = microtubules + microfilaments (actin) + intermediate filaments. Microvilli are cell surface projections, not cytoskeletal elements.",topic:"Cytoskeleton",year:"Predicted"},
-  {q:"Streaming of cytoplasm (cyclosis) is associated with which cytoskeletal element?",opts:["Microtubules","Actin microfilaments","Intermediate filaments","Collagen fibers"],ans:1,sol:"Cytoplasmic streaming (cyclosis) is driven by myosin motors moving along actin filaments. Seen in plant cells and Amoeba.",topic:"Cytoskeleton",year:"Predicted"},
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"ATP synthesis occurs in mitochondria.",
+topic:"Cell Organelles",
+year:"Predicted"
+},
 
-  // ===== CHROMOSOMES =====
-  {q:"The centromere is the region where",opts:["DNA replication begins","Spindle fibres attach","Crossing over occurs","RNA is synthesized"],ans:1,sol:"Spindle fibres (kinetochore fibres) attach to centromere via kinetochore proteins during cell division to pull chromatids apart.",topic:"Chromosomes",year:"PYQ"},
-  {q:"Acrocentric chromosome has centromere at",opts:["Middle","Sub-terminal position","Terminal end","Both ends"],ans:1,sol:"Acrocentric = centromere near (not at) end → sub-terminal. Metacentric = middle, Telocentric = terminal. SAT chromosomes are acrocentric.",topic:"Chromosomes",year:"PYQ"},
-  {q:"Which of the following is CORRECT about eukaryotic chromosome?",opts:["It has only DNA","It has DNA + RNA + proteins","It is circular like prokaryotes","It lacks histones"],ans:1,sol:"Eukaryotic chromosomes = DNA + histone proteins + non-histone proteins + some RNA. Linear structure, not circular.",topic:"Chromosomes",year:"PYQ"},
-  {q:"Constriction in chromosome other than centromere is called",opts:["Centromere","Secondary constriction","Telomere","Kinetochore"],ans:1,sol:"Secondary constriction = NOR (nucleolar organizer region) where rDNA is located and nucleolus forms. Found on SAT chromosomes.",topic:"Chromosomes",year:"PYQ"},
-  {q:"Lampbrush chromosomes are seen in",opts:["Oocytes of amphibians","Salivary glands","Liver cells","Neurons"],ans:0,sol:"Lampbrush chromosomes occur in oocytes (eggs) of amphibians during prolonged diplotene stage — active transcription creates loops.",topic:"Chromosomes",year:"Predicted"},
-  {q:"Polytene chromosomes are found in",opts:["Oocytes","Salivary glands of Drosophila","Bacteria","During meiosis"],ans:1,sol:"Polytene chromosomes found in salivary glands of Drosophila — result of DNA replication without cell division (endomitosis). Show puffing.",topic:"Chromosomes",year:"Predicted"},
-  {q:"Balbiani rings represent",opts:["Inactive chromatin","Active gene transcription sites","Heterochromatin","Centromere regions"],ans:1,sol:"Puffs/Balbiani rings in polytene chromosomes = regions of active RNA synthesis. Indicate active gene expression. Swell with RNA.",topic:"Chromosomes",year:"Predicted"},
-  {q:"Telomeres function to",opts:["Initiate replication","Protect chromosome ends from degradation","Attach to spindle","Store genetic info"],ans:1,sol:"Telomeres (TTAGGG repeats in humans) cap chromosome ends, preventing degradation, end-to-end fusion, and solve end-replication problem.",topic:"Chromosomes",year:"Predicted"},
+{
+q:`Assertion (A): Mature mammalian RBCs lack nucleus.
+Reason (R): Presence of nucleus decreases oxygen carrying capacity.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Loss of nucleus provides more space for haemoglobin.",
+topic:"Nucleus",
+year:"Predicted"
+},
 
-  // ===== CELL CYCLE =====
-  {q:"The S phase of cell cycle is associated with",opts:["Cell growth","DNA replication","Spindle formation","Cytokinesis"],ans:1,sol:"S (Synthesis) phase: DNA replication occurs. DNA content doubles from 2C to 4C. Histone synthesis also occurs in S phase.",topic:"Cell Cycle",year:"PYQ"},
-  {q:"The correct sequence of cell cycle phases is",opts:["G1→S→G2→M","S→G1→G2→M","G1→G2→S→M","M→S→G1→G2"],ans:0,sol:"Interphase: G1 (cell growth) → S (DNA synthesis) → G2 (prep for division) → M phase (mitosis/meiosis). G0 = quiescent phase.",topic:"Cell Cycle",year:"PYQ"},
-  {q:"G0 phase cells are",opts:["Actively dividing","Quiescent/non-dividing","In S phase","In mitosis"],ans:1,sol:"G0 = quiescent phase. Cells exit cell cycle and don't divide. Some can re-enter cycle under stimulation. E.g. liver cells, neurons.",topic:"Cell Cycle",year:"PYQ"},
-  {q:"Apoptosis is",opts:["Cell division","Programmed cell death","Accidental cell death","Cell swelling"],ans:1,sol:"Apoptosis = programmed cell death. Orderly, energy-dependent (caspase-mediated) process. Important in development and immune response. ≠ necrosis.",topic:"Cell Cycle",year:"PYQ"},
-  {q:"In which phase does DNA content become 4N?",opts:["After G1","After S phase","After G2","At metaphase"],ans:1,sol:"DNA doubles during S phase: 2N→4N DNA content. Chromosome number remains 2N. 4N DNA content maintained through G2 and M phase.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"The enzyme responsible for DNA unwinding during replication is",opts:["DNA ligase","Primase","Helicase","Topoisomerase"],ans:2,sol:"Helicase breaks hydrogen bonds between base pairs to unwind DNA at replication fork. Topoisomerase relieves torsional tension ahead.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"The enzyme that joins Okazaki fragments is",opts:["Helicase","Primase","DNA ligase","DNA polymerase I"],ans:2,sol:"DNA ligase joins Okazaki fragments on lagging strand by forming phosphodiester bonds between them. Also seals nicks in DNA.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"Which enzyme relaxes supercoiling ahead of replication fork?",opts:["Helicase","Topoisomerase","Ligase","Primase"],ans:1,sol:"Topoisomerase II cuts and rejoins DNA to relieve positive supercoils (torsional stress) created ahead of replication fork.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"Restriction point in cell cycle is present in",opts:["G1 phase","S phase","G2 phase","M phase"],ans:0,sol:"Restriction point (R point) in G1: cell commits to division if growth factors present. Key checkpoint before S phase entry.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"G1/S checkpoint prevents entry into S phase if",opts:["Cell is too large","DNA is damaged","Spindle is incomplete","Cytoplasm is undivided"],ans:1,sol:"G1/S checkpoint: p53 activates p21 (CDK inhibitor). If DNA damage detected, cell arrested in G1 for repair or apoptosis.",topic:"Cell Cycle",year:"Predicted"},
-  {q:"p53 protein is a",opts:["Oncogene product","Tumor suppressor protein","Structural protein","Transport protein"],ans:1,sol:"p53 = tumor suppressor protein. Monitors DNA damage, activates repair, triggers apoptosis if irreparable. Called 'guardian of genome'.",topic:"Cell Cycle",year:"Predicted"},
+{
+q:`The chromosome number remains unchanged after`,
+opts:[
+"Meiosis",
+"Mitosis",
+"Crossing over",
+"Synapsis"
+],
+ans:1,
+sol:"Mitosis maintains chromosome number.",
+topic:"Mitosis",
+year:"PYQ"
+},
 
-  // ===== MITOSIS =====
-  {q:"During which phase are chromosomes most clearly visible for karyotyping?",opts:["Prophase","Metaphase","Anaphase","Telophase"],ans:1,sol:"Metaphase: chromosomes align at equatorial plate, maximally condensed (1–10 μm). Best phase for karyotyping and chromosome studies.",topic:"Mitosis",year:"PYQ"},
-  {q:"Which phase of mitosis is longest?",opts:["Metaphase","Anaphase","Prophase","Telophase"],ans:2,sol:"Prophase is the longest phase of mitosis — chromosome condensation, centriole duplication, spindle formation all take more time.",topic:"Mitosis",year:"PYQ"},
-  {q:"Karyokinesis refers to",opts:["Division of cytoplasm","Division of nucleus","DNA replication","Chromosome condensation"],ans:1,sol:"Karyokinesis = nuclear division (division of nucleus). Cytokinesis = cytoplasmic division. Both together complete cell division.",topic:"Mitosis",year:"PYQ"},
-  {q:"The spindle fibers are made up of",opts:["Actin filaments","Tubulin protein","Intermediate filaments","Collagen"],ans:1,sol:"Spindle fibers = microtubules (tubulin polymers). Kinetochore fibers attach to centromeres. Polar fibers overlap at equatorial plane.",topic:"Mitosis",year:"PYQ"},
-  {q:"Cytokinesis in plant cells occurs by",opts:["Cleavage furrow","Cell plate formation","Spindle elongation","Fragmentation"],ans:1,sol:"Plant cells form a cell plate (phragmoplast) at center during telophase, expanding outward. Animals use cleavage furrow (actomyosin ring).",topic:"Mitosis",year:"PYQ"},
-  {q:"Cell plate formation starts at",opts:["Periphery and moves inward","Center and moves outward","Both ends simultaneously","Top of cell"],ans:1,sol:"Cell plate forms from Golgi vesicles accumulating at equatorial plane center (phragmoplast), expanding outward to meet cell walls.",topic:"Mitosis",year:"PYQ"},
-  {q:"The condensin protein complex functions in",opts:["DNA replication","Chromosome condensation","Spindle formation","Cytokinesis"],ans:1,sol:"Condensin complexes (SMC proteins) drive chromosome condensation during prophase. Cohesin holds sister chromatids together.",topic:"Mitosis",year:"Predicted"},
-  {q:"MTOC stands for",opts:["Mitochondrial outer membrane complex","Microtubule organizing center","Membrane transport outer channel","Micro transfer organelle complex"],ans:1,sol:"MTOC = Microtubule Organizing Center. Centrioles form MTOC (with aster) in animals. Absent in higher plant cells (anastral spindle).",topic:"Mitosis",year:"Predicted"},
+{
+q:`Assertion (A): Ribosomes are called protein factories.
+Reason (R): Ribosomes are sites of translation.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Translation occurs on ribosomes.",
+topic:"Ribosomes",
+year:"PYQ Inspired"
+},
 
-  // ===== MEIOSIS =====
-  {q:"Synaptonemal complex is formed during",opts:["Leptotene","Zygotene","Pachytene","Diplotene"],ans:1,sol:"Synaptonemal complex (protein structure) forms during zygotene when homologous chromosomes pair (synapsis). Complete by pachytene.",topic:"Meiosis",year:"PYQ"},
-  {q:"Crossing over occurs during",opts:["Leptotene","Zygotene","Pachytene","Diplotene"],ans:2,sol:"Crossing over (exchange of DNA segments between non-sister chromatids of homologous chromosomes) occurs at pachytene stage of meiosis I.",topic:"Meiosis",year:"PYQ"},
-  {q:"Chiasmata are seen during",opts:["Leptotene","Zygotene","Diplotene","Diakinesis"],ans:2,sol:"Chiasmata (X-shaped structures at crossover points) first become visible in diplotene when bivalents begin to separate.",topic:"Meiosis",year:"PYQ"},
-  {q:"In meiosis II, separation of _____ occurs",opts:["Homologous chromosomes","Sister chromatids","Bivalents","Tetrads"],ans:1,sol:"Meiosis I: homologous chromosomes separate (reductional). Meiosis II: sister chromatids separate (equational — similar to mitosis).",topic:"Meiosis",year:"PYQ"},
-  {q:"Which of the following is CORRECT about meiosis?",opts:["It occurs in somatic cells","It results in 4 diploid cells","Crossing over increases genetic variation","It has only one division"],ans:2,sol:"Crossing over in pachytene of meiosis I shuffles alleles between homologs — major source of genetic variation in sexually reproducing organisms.",topic:"Meiosis",year:"PYQ"},
-  {q:"Which represents correct ploidy after fertilization?",opts:["n","2n","3n","4n"],ans:1,sol:"Fertilization: n (egg) + n (sperm) = 2n (zygote). Diploid state is restored. Meiosis in reproductive organs reduces to n.",topic:"Meiosis",year:"PYQ"},
+{
+q:`Which of the following are semiautonomous organelles?
 
-  // ===== ADDITIONAL ORGANELLES =====
-  {q:"Glyoxysomes are found in",opts:["Animal cells","Germinating fatty seeds","Liver cells","Muscle cells"],ans:1,sol:"Glyoxysomes (specialized peroxisomes) are in germinating fatty seeds — convert fats to sugars via glyoxylate cycle. Not in animals.",topic:"Cell Organelles",year:"Predicted"},
-  {q:"Peroxisomes detoxify harmful compounds using",opts:["Hydrogen peroxide","Catalase enzyme","Lysosomal acid","Protease"],ans:1,sol:"Peroxisomes use catalase to decompose H₂O₂ (produced during fatty acid oxidation and detox reactions) → H₂O + O₂. Prevent cellular damage.",topic:"Cell Organelles",year:"Predicted"},
-  {q:"Which of the following correctly matches organelle to its function?",opts:["Ribosome — lipid synthesis","Mitochondria — protein synthesis","Chloroplast — photosynthesis","Lysosome — ATP production"],ans:2,sol:"Chloroplast = photosynthesis. Ribosome = protein synthesis. Mitochondria = ATP. Lysosome = digestion.",topic:"Cell Organelles",year:"PYQ"},
-  {q:"Undulipodia are",opts:["Bacterial flagella","Eukaryotic cilia and flagella","Pili","Fimbriae"],ans:1,sol:"Undulipodia = eukaryotic cilia and flagella (9+2 microtubule arrangement). Bacterial flagella are structurally different (no tubulin, no 9+2).",topic:"Cell Organelles",year:"Predicted"},
-  {q:"Which of the following has the largest cell?",opts:["Bacterium","Ostrich egg","Human ovum","Nerve cell"],ans:1,sol:"The ostrich egg is the largest known single cell (~15 cm diameter). The yolk constitutes the actual cell. Human ovum ~0.1mm.",topic:"Cell Size",year:"PYQ"},
-  {q:"The nuclear pore complex allows passage of",opts:["Small molecules only","Large molecules by active transport","Nothing","Only lipids"],ans:1,sol:"Nuclear pore complex (NPC) — ~120 MDa protein structure. Controls nucleo-cytoplasmic transport. Allows active transport of proteins, mRNA.",topic:"Nucleus",year:"Predicted"},
-  {q:"Which phase shows DNA content 4N but chromosome number 2N?",opts:["G1","G2","After meiosis I","Anaphase of mitosis"],ans:1,sol:"G2 phase: DNA replicated (4N content) but chromosomes not yet separated (2N chromosome count, as sister chromatids are still joined).",topic:"Cell Cycle",year:"Predicted"},
-  {q:"Which of the following is the site of fatty acid synthesis?",opts:["Mitochondria","Smooth ER","Rough ER","Nucleus"],ans:1,sol:"Smooth ER is the major site of fatty acid and phospholipid synthesis in eukaryotic cells (fatty acid synthase complex).",topic:"Endoplasmic Reticulum",year:"Predicted"},
-  {q:"Chromatin remodeling is important for",opts:["Cell wall synthesis","Gene expression regulation","Ribosome assembly","ATP production"],ans:1,sol:"Chromatin remodeling (histone modification, DNA methylation, nucleosome repositioning) controls gene accessibility and gene expression.",topic:"Nucleus",year:"Predicted"},
-  {q:"Assertion: Cell division in bacteria is amitotic. Reason: Bacteria are prokaryotes.",opts:["Both true, R explains A","Both true, R does not explain A","A true R false","Both false"],ans:0,sol:"Bacteria divide by binary fission (amitotic). Being prokaryotes, they lack organized spindle and membrane-bound nucleus. R correctly explains A.",topic:"Prokaryotic Cell",year:"Predicted"},
+A. Mitochondria
+B. Chloroplast
+C. Ribosome
+D. Golgi body`,
+opts:[
+"A and B only",
+"A, B and C only",
+"B and D only",
+"Only A"
+],
+ans:0,
+sol:"Mitochondria and chloroplast possess own DNA.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements:
+
+A. Histones are positively charged proteins.
+B. Nucleosome contains histone octamer.
+C. H1 histone is absent in chromatin.
+D. Euchromatin is transcriptionally active.
+
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and D only",
+"All are correct"
+],
+ans:0,
+sol:"H1 acts as linker histone.",
+topic:"Nucleus",
+year:"Predicted"
+},
+
+{
+q:`Crossing over occurs during`,
+opts:[
+"Leptotene",
+"Zygotene",
+"Pachytene",
+"Diplotene"
+],
+ans:2,
+sol:"Crossing over occurs during pachytene.",
+topic:"Meiosis",
+year:"PYQ"
+
+},
+
+{
+q:`Which biomolecule acts as immediate source of energy?`,
+opts:[
+"Protein",
+"Lipid",
+"Glucose",
+"DNA"
+],
+ans:2,
+sol:"Glucose acts as immediate source of energy.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Which of the following is NOT a reducing sugar?`,
+opts:[
+"Lactose",
+"Maltose",
+
+"Sucrose",
+"Galactose"
+],
+ans:2,
+sol:"Sucrose is non reducing sugar.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements regarding enzymes:
+
+A. Enzymes lower activation energy.
+B. Enzymes are consumed during reaction.
+C. Enzymes show specificity.
+D. Enzymes increase equilibrium constant.
+
+Choose the correct option.`,
+opts:[
+"A and C only",
+"B and D only",
+"A, B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Enzymes are not consumed and do not change equilibrium constant.",
+topic:"Biomolecules",
+year:"Predicted"
+},
+
+{
+q:`The bond present between amino acids in proteins is`,
+opts:[
+"Glycosidic bond",
+"Peptide bond",
+"Hydrogen bond",
+"Phosphodiester bond"
+],
+ans:1,
+sol:"Amino acids linked by peptide bond.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): DNA replication is semiconservative.
+Reason (R): Each daughter DNA contains one parental strand.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"One parental strand retained in daughter DNA.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`Which enzyme removes supercoiling during DNA replication?`,
+opts:[
+"Ligase",
+"Topoisomerase",
+"Helicase",
+"Primase"
+],
+ans:1,
+sol:"Topoisomerase relieves torsional stress.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`The spindle checkpoint ensures`,
+opts:[
+"ATP synthesis",
+"Correct attachment of chromosomes",
+"Protein synthesis",
+"Cell wall formation"
+],
+ans:1,
+sol:"Ensures chromosomes properly attached.",
+topic:"Cell Cycle",
+year:"Predicted"
+},
+
+{
+q:`Which one of the following is correctly matched?`,
+opts:[
+"SER — Protein synthesis",
+"Lysosome — ATP synthesis",
+"Golgi body — Packaging of proteins",
+"Ribosome — Lipid synthesis"
+],
+ans:2,
+sol:"Golgi modifies and packages proteins.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Read the following carefully:
+
+A. Glycogen is storage polysaccharide in animals.
+B. Cellulose contains β-glucose.
+C. Chitin is nitrogen containing polysaccharide.
+D. Starch is structural polysaccharide in plants.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Starch is storage polysaccharide.",
+topic:"Biomolecules",
+year:"Predicted"
+},
+
+{
+q:`The fluidity of plasma membrane is mainly regulated by`,
+opts:[
+"DNA",
+"RNA",
+"Cholesterol",
+"Cellulose"
+],
+ans:2,
+sol:"Cholesterol regulates membrane fluidity.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
+
+{
+q:`Which organelle detoxifies hydrogen peroxide?`,
+opts:[
+"Golgi body",
+"Peroxisome",
+"Ribosome",
+"SER"
+],
+ans:1,
+sol:"Catalase detoxifies H2O2.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Which of the following contains 70S ribosomes?
+
+A. Bacteria
+B. Mitochondria
+C. Chloroplast
+D. Golgi body`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Golgi body lacks ribosomes.",
+topic:"Ribosomes",
+year:"Predicted"
+},
+
+{
+q:`The site of oxidative phosphorylation is`,
+opts:[
+"Matrix",
+"Cristae",
+"Cytoplasm",
+"Stroma"
+],
+ans:1,
+sol:"ETS occurs on cristae.",
+topic:"Mitochondria",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Chloroplasts are semiautonomous organelles.
+Reason (R): They possess circular DNA and 70S ribosomes.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Own DNA and ribosomes make chloroplast semiautonomous.",
+topic:"Chloroplast",
+year:"Predicted"
+},
+
+{
+q:`The chromosome with terminal centromere is`,
+opts:[
+"Metacentric",
+"Submetacentric",
+"Acrocentric",
+"Telocentric"
+],
+ans:3,
+sol:"Telocentric chromosome has terminal centromere.",
+topic:"Chromosomes",
+year:"PYQ"
+},
+
+{
+q:`The process of programmed cell death is`,
+opts:[
+"Necrosis",
+"Apoptosis",
+"Mutation",
+"Transformation"
+],
+ans:1,
+sol:"Apoptosis is programmed cell death.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements regarding membrane transport:
+
+A. Diffusion requires ATP.
+B. Facilitated diffusion uses carrier proteins.
+C. Active transport occurs against concentration gradient.
+D. Osmosis refers to movement of water across semipermeable membrane.
+
+Choose the correct option.`,
+opts:[
+"B, C and D only",
+"A and D only",
+"A, B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Simple diffusion does not require ATP.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
+
+{
+q:`Which of the following structures possess 9+2 arrangement?`,
+opts:[
+"Centrioles",
+"Basal bodies",
+"Cilia and flagella",
+"Microfilaments"
+],
+ans:2,
+sol:"Cilia and flagella possess 9+2 arrangement.",
+topic:"Cytoskeleton",
+year:"Predicted"
+},
+
+{
+q:`The site of glycolysis is`,
+opts:[
+"Nucleus",
+"Mitochondria",
+"Cytoplasm",
+"Golgi body"
+],
+ans:2,
+sol:"Glycolysis occurs in cytoplasm.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+
+{
+q:`Read the following statements carefully regarding chromatin:
+
+A. Euchromatin stains lightly.
+B. Heterochromatin is transcriptionally inactive.
+C. Histones are acidic proteins.
+D. Nucleosome contains histone octamer.
+
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and D only",
+"All are correct"
+],
+ans:0,
+sol:"Histones are basic proteins rich in lysine and arginine.",
+topic:"Nucleus",
+year:"Predicted"
+},
+
+{
+q:`The checkpoint before entry into S phase is`,
+opts:[
+"G1 checkpoint",
+"G2 checkpoint",
+"M checkpoint",
+"Spindle checkpoint"
+],
+ans:0,
+sol:"Restriction checkpoint occurs during G1 phase.",
+topic:"Cell Cycle",
+year:"Predicted"
+},
+
+{
+q:`Which phase is called reductional division?`,
+opts:[
+"Mitosis",
+"Meiosis I",
+"Meiosis II",
+"Binary fission"
+],
+ans:1,
+sol:"Chromosome number reduces during meiosis I.",
+topic:"Meiosis",
+year:"PYQ"
+},
+
+{
+q:`The spindle fibres originate from`,
+opts:[
+"Golgi body",
+"Centrosome",
+"Lysosome",
+"Nucleolus"
+],
+ans:1,
+sol:"Centrosome acts as MTOC.",
+topic:"Mitosis",
+year:"PYQ"
+},
+
+{
+q:`The largest known cell is`,
+opts:[
+"Human ovum",
+"Neuron",
+"Ostrich egg",
+"Amoeba"
+],
+ans:2,
+sol:"Ostrich egg is largest known cell.",
+topic:"Cell Theory",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Plasma membrane is selectively permeable.
+Reason (R): Lipid bilayer allows unrestricted movement of all molecules.`,
+opts:[
+"A true R false",
+"Both true",
+"Both false",
+"A false R true"
+],
+ans:0,
+sol:"Only selected molecules pass through membrane.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
+
+{
+q:`Which organelle is directly involved in photorespiration?`,
+opts:[
+"Only chloroplast",
+"Only mitochondria",
+"Chloroplast, peroxisome and mitochondria",
+"Only peroxisome"
+],
+ans:2,
+sol:"Photorespiration involves chloroplast, peroxisome and mitochondria.",
+topic:"Cell Organelles",
+year:"Predicted"
+},
+
+{
+q:`The site of ATP synthesis in mitochondria is`,
+opts:[
+"Outer membrane",
+"Cristae",
+"Matrix",
+"Intermembrane space"
+],
+ans:1,
+sol:"ATP synthase complexes present on cristae.",
+topic:"Mitochondria",
+year:"PYQ"
+},
+
+{
+q:`Read the following carefully:
+
+A. Histones are basic proteins.
+B. DNA is negatively charged.
+C. Histones facilitate DNA packaging.
+D. Histones are absent in eukaryotes.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Histones occur in eukaryotes.",
+topic:"Nucleus",
+year:"Predicted"
+},
+
+{
+q:`The phase between meiosis I and meiosis II is`,
+opts:[
+"Interphase",
+"Interkinesis",
+"Prophase",
+"Cytokinesis"
+],
+ans:1,
+sol:"Interkinesis occurs between meiotic divisions.",
+topic:"Meiosis",
+year:"PYQ"
+},
+
+{
+q:`Which one of the following is NOT a reducing sugar?`,
+opts:[
+"Glucose",
+"Fructose",
+"Sucrose",
+"Galactose"
+],
+ans:2,
+sol:"Sucrose is non reducing sugar.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Which of the following is true regarding enzymes?`,
+opts:[
+"They increase activation energy",
+"They are consumed during reaction",
+"They are highly specific",
+"They change equilibrium constant"
+],
+ans:2,
+sol:"Enzymes show substrate specificity.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`The site of ribosome synthesis is`,
+opts:[
+"Golgi body",
+"Nucleolus",
+"SER",
+"Mitochondria"
+],
+ans:1,
+sol:"rRNA synthesis occurs in nucleolus.",
+topic:"Nucleus",
+year:"PYQ"
+},
+
+{
+q:`The major microtubule organizing centre in animal cell is`,
+opts:[
+"Golgi body",
+"Centrosome",
+"Lysosome",
+"Nucleus"
+],
+ans:1,
+sol:"Centrosome acts as MTOC.",
+topic:"Centrioles",
+year:"Predicted"
+},
+
+{
+q:`Read the following statements:
+
+A. Glycolipids occur in plasma membrane.
+B. Cholesterol decreases membrane fluidity at high temperature.
+C. Carrier proteins participate in facilitated diffusion.
+D. Integral proteins are loosely attached to membrane.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Integral proteins are firmly embedded in membrane.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
+
+{
+q:`Which stage of meiosis involves terminalization of chiasmata?`,
+opts:[
+"Leptotene",
+"Pachytene",
+"Diplotene",
+"Diakinesis"
+],
+ans:3,
+sol:"Terminalization occurs during diakinesis.",
+topic:"Meiosis",
+year:"PYQ"
+},
+
+{
+q:`The contractile ring during cytokinesis is composed mainly of`,
+opts:[
+"Tubulin",
+"Actin and myosin",
+"Cellulose",
+"DNA"
+],
+ans:1,
+sol:"Actin and myosin help cleavage furrow formation.",
+topic:"Mitosis",
+year:"Predicted"
+},
+
+{
+q:`Which of the following is NOT membrane bound?`,
+opts:[
+"Lysosome",
+"Golgi body",
+"Ribosome",
+"Peroxisome"
+],
+ans:2,
+sol:"Ribosomes are non membrane bound.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Read the following carefully:
+
+A. Peroxisomes contain catalase.
+B. Glyoxysomes occur in germinating seeds.
+C. Lysosomes possess acidic pH.
+D. Ribosomes synthesize lipids.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Ribosomes synthesize proteins not lipids.",
+topic:"Cell Organelles",
+year:"Predicted"
+},
+
+{
+q:`Which chromosome has centromere near one end?`,
+opts:[
+"Metacentric",
+"Submetacentric",
+"Acrocentric",
+"Telocentric"
+],
+ans:2,
+sol:"Acrocentric chromosome has centromere near one end.",
+topic:"Chromosomes",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Cell wall prevents osmotic bursting in plant cells.
+Reason (R): Cell wall is freely permeable.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:1,
+sol:"Freely permeable wall provides mechanical strength but does not directly explain osmotic resistance.",
+topic:"Cell Wall",
+year:"Predicted"
+},
+
+{
+q:`Which enzyme synthesizes RNA primer during DNA replication?`,
+opts:[
+"DNA polymerase",
+"Helicase",
+"Primase",
+"Ligase"
+],
+ans:2,
+sol:"Primase synthesizes RNA primer.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`The phase in which chromosomes align at equatorial plate is`,
+opts:[
+"Prophase",
+"Metaphase",
+"Anaphase",
+"Telophase"
+],
+ans:1,
+sol:"Chromosomes align during metaphase.",
+topic:"Mitosis",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements regarding cell wall:
+
+A. Primary wall is capable of growth.
+B. Secondary wall is deposited inner to primary wall.
+C. Middle lamella mainly contains calcium pectate.
+D. Cellulose microfibrils are absent in plant cell wall.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Cellulose microfibrils are major components of wall.",
+topic:"Cell Wall",
+year:"Predicted"
+},
+
+{
+q:`Which of the following are true regarding lysosomes?
+
+A. They contain hydrolytic enzymes.
+B. They are formed by Golgi body.
+C. Their enzymes work best at acidic pH.
+D. They synthesize proteins.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Lysosomes do not synthesize proteins.",
+topic:"Lysosomes",
+year:"Predicted"
+},
+
+{
+q:`The movement of water through semipermeable membrane is called`,
+opts:[
+"Diffusion",
+"Facilitated diffusion",
+"Osmosis",
+"Active transport"
+],
+ans:2,
+sol:"Osmosis is movement of water across semipermeable membrane.",
+topic:"Cell Membrane",
+year:"PYQ"
+},
+
+{
+q:`Which one is correctly matched?`,
+opts:[
+"Peroxisome — ATP synthesis",
+"Ribosome — Protein synthesis",
+"Golgi body — Photosynthesis",
+"Lysosome — Lipid synthesis"
+],
+ans:1,
+sol:"Ribosomes synthesize proteins.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Crossing over increases genetic variation.
+Reason (R): Exchange occurs between non-sister chromatids of homologous chromosomes.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Crossing over generates recombination.",
+topic:"Meiosis",
+year:"PYQ Inspired"
+},
+
+{
+q:`Which of the following statements are true?
+
+A. DNA polymerase synthesizes DNA only in 5'→3' direction.
+B. Okazaki fragments formed on lagging strand.
+C. Helicase breaks hydrogen bonds.
+D. Ligase synthesizes RNA primer.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Primase synthesizes RNA primer.",
+topic:"Cell Cycle",
+year:"Predicted"
+},
+
+{
+q:`The stage during which nucleolus disappears is`,
+opts:[
+"Interphase",
+"Prophase",
+"Anaphase",
+"Cytokinesis"
+],
+ans:1,
+sol:"Nucleolus disappears during prophase.",
+topic:"Mitosis",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements carefully regarding chloroplast:
+
+A. Stroma contains circular DNA.
+B. Grana are interconnected by stroma lamellae.
+C. Chlorophyll is present in outer membrane.
+D. Chloroplast possesses 70S ribosomes.
+
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and D only",
+"All are correct"
+],
+ans:0,
+sol:"Chlorophyll is present in thylakoid membranes not outer membrane.",
+topic:"Chloroplast",
+year:"Predicted"
+},
+
+{
+q:`Assertion (A): Mitochondria are called semiautonomous organelles.
+Reason (R): They possess their own DNA and ribosomes.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Own DNA and ribosomes make mitochondria semiautonomous.",
+topic:"Mitochondria",
+year:"PYQ Inspired"
+},
+
+{
+q:`Which phase of meiosis involves pairing of homologous chromosomes?`,
+opts:[
+"Leptotene",
+"Zygotene",
+"Pachytene",
+"Diakinesis"
+],
+ans:1,
+sol:"Synapsis occurs during zygotene.",
+topic:"Meiosis",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements:
+
+A. Plasma membrane is selectively permeable.
+B. Passive transport requires ATP.
+C. Facilitated diffusion occurs through carrier proteins.
+D. Active transport occurs against concentration gradient.
+
+Choose the correct option.`,
+opts:[
+"A, C and D only",
+"A and B only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Passive transport does not require ATP.",
+topic:"Cell Membrane",
+year:"Predicted"
+},
+
+{
+q:`The primary cell wall is mainly composed of`,
+opts:[
+"Lignin",
+"Suberin",
+"Cellulose",
+"Cutin"
+],
+ans:2,
+sol:"Primary wall mainly contains cellulose microfibrils.",
+topic:"Cell Wall",
+year:"PYQ"
+},
+
+{
+q:`Which organelle modifies, packages and dispatches proteins?`,
+opts:[
+"RER",
+"SER",
+"Golgi apparatus",
+"Lysosome"
+],
+ans:2,
+sol:"Golgi body modifies and packages proteins.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Cell plate formation occurs in plant cells.
+Reason (R): Plant cells possess rigid cell wall.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Rigid wall prevents cleavage furrow formation.",
+topic:"Mitosis",
+year:"Predicted"
+},
+
+{
+q:`The monomer units of nucleic acids are`,
+opts:[
+"Amino acids",
+"Monosaccharides",
+"Nucleotides",
+"Fatty acids"
+],
+ans:2,
+sol:"DNA and RNA are polymers of nucleotides.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Which one is correctly matched?`,
+opts:[
+"Centrosome — Protein synthesis",
+"Peroxisome — Detoxification",
+"Lysosome — Photosynthesis",
+"Golgi body — ATP synthesis"
+],
+ans:1,
+sol:"Peroxisomes detoxify harmful substances.",
+topic:"Cell Organelles",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements regarding enzymes:
+
+A. Apoenzyme is protein part of enzyme.
+B. Coenzyme is organic non-protein component.
+C. Holoenzyme = apoenzyme + cofactor.
+D. All enzymes are proteins.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Ribozymes are catalytic RNA molecules.",
+topic:"Biomolecules",
+year:"Predicted"
+},
+
+{
+q:`The phase in which DNA replication occurs is`,
+opts:[
+"G1 phase",
+"S phase",
+"G2 phase",
+"M phase"
+],
+ans:1,
+sol:"DNA synthesis occurs during S phase.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`Which of the following statements are correct regarding cilia and flagella?
+
+A. Both possess 9+2 arrangement.
+B. Dynein arms help in movement.
+C. Microtubules are made of tubulin.
+D. Nexin links are absent.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Nexin links are present in axoneme.",
+topic:"Cytoskeleton",
+year:"Predicted"
+},
+
+{
+q:`The process by which solid materials are engulfed by cell is called`,
+opts:[
+"Pinocytosis",
+"Exocytosis",
+"Phagocytosis",
+"Diffusion"
+],
+ans:2,
+sol:"Phagocytosis means cell eating.",
+topic:"Cell Membrane",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Histones facilitate DNA packaging.
+Reason (R): Histones are positively charged proteins.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Positive histones interact with negatively charged DNA.",
+topic:"Nucleus",
+year:"Predicted"
+},
+
+{
+q:`Which phase of mitosis is characterized by splitting of centromere?`,
+opts:[
+"Prophase",
+"Metaphase",
+"Anaphase",
+"Telophase"
+],
+ans:2,
+sol:"Centromeres split during anaphase.",
+topic:"Mitosis",
+year:"PYQ"
+},
+
+{
+q:`Read the following carefully:
+
+A. Glyoxysomes convert fats into sugars.
+B. Glyoxysomes occur in germinating seeds.
+C. Peroxisomes contain oxidases.
+D. Lysosomes contain ribosomes.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Lysosomes contain hydrolytic enzymes not ribosomes.",
+topic:"Cell Organelles",
+year:"Predicted"
+},
+
+{
+q:`Which of the following is a storage polysaccharide in plants?`,
+opts:[
+"Glycogen",
+"Cellulose",
+"Starch",
+"Chitin"
+],
+ans:2,
+sol:"Plants store food as starch.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`The enzyme responsible for joining Okazaki fragments is`,
+opts:[
+"Helicase",
+"Ligase",
+"Primase",
+"Topoisomerase"
+],
+ans:1,
+sol:"DNA ligase joins Okazaki fragments.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Crossing over occurs during pachytene.
+Reason (R): Synaptonemal complex forms during pachytene.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:1,
+sol:"Synaptonemal complex forms mainly during zygotene.",
+topic:"Meiosis",
+year:"Predicted"
+},
+
+{
+q:`Which one is NOT a function of Golgi apparatus?`,
+opts:[
+"Glycosylation",
+"Packaging",
+"ATP synthesis",
+"Secretion"
+],
+ans:2,
+sol:"ATP synthesis occurs in mitochondria.",
+topic:"Golgi Apparatus",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements regarding carbohydrates:
+
+A. Monosaccharides cannot be hydrolysed further.
+B. Lactose is disaccharide.
+C. Cellulose contains α-glucose.
+D. Glycogen is highly branched.
+
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Cellulose contains β-glucose.",
+topic:"Biomolecules",
+year:"Predicted"
+},
+
+{
+q:`The site of Krebs cycle is`,
+opts:[
+"Cytoplasm",
+"Mitochondrial matrix",
+"Cristae",
+"Nucleus"
+],
+ans:1,
+sol:"Krebs cycle occurs in mitochondrial matrix.",
+topic:"Biomolecules",
+year:"PYQ"
+},
+
+{
+q:`Which chromosome shape is formed when centromere is exactly in middle?`,
+opts:[
+"Acrocentric",
+"Submetacentric",
+"Metacentric",
+"Telocentric"
+],
+ans:2,
+sol:"Metacentric chromosome has equal arms.",
+topic:"Chromosomes",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Plant cytokinesis occurs by cell plate formation.
+Reason (R): Golgi vesicles accumulate at equatorial plane.`,
+opts:[
+"Both A and R true and R explains A",
+"Both true but R not explanation",
+"A true R false",
+"Both false"
+],
+ans:0,
+sol:"Golgi vesicles fuse to form cell plate.",
+topic:"Mitosis",
+year:"Predicted"
+},
+
+{
+q:`Which of the following statements are correct regarding lysosomes?
+
+A. They contain acid hydrolases.
+B. Their enzymes work best at acidic pH.
+C. They are involved in autophagy.
+D. They possess circular DNA.
+
+Choose the correct option.`,
+opts:[
+"A, B and C only",
+"A and D only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Lysosomes do not contain DNA.",
+topic:"Lysosomes",
+year:"Predicted"
+},
+
+{
+q:`The movement of solvent molecules from higher water potential to lower water potential through semipermeable membrane is`,
+opts:[
+"Diffusion",
+"Facilitated diffusion",
+"Osmosis",
+"Active transport"
+],
+ans:2,
+sol:"Definition of osmosis.",
+topic:"Cell Membrane",
+year:"PYQ"
+},
+
+{
+q:`Which enzyme breaks hydrogen bonds during DNA replication?`,
+opts:[
+"Ligase",
+"Primase",
+"Helicase",
+"Polymerase"
+],
+ans:2,
+sol:"Helicase unwinds DNA helix.",
+topic:"Cell Cycle",
+year:"PYQ"
+},
+
+{
+q:`Read the following statements:
+
+A. Ribosomes are non-membranous organelles.
+B. Polysomes contain multiple ribosomes.
+C. 80S ribosomes occur in prokaryotes.
+D. Ribosomes synthesize proteins.
+
+Choose the correct option.`,
+opts:[
+"A, B and D only",
+"A and C only",
+"B and C only",
+"All are correct"
+],
+ans:0,
+sol:"Prokaryotes contain 70S ribosomes.",
+topic:"Ribosomes",
+year:"Predicted"
+},
+
+{
+q:`Which phase is characterized by reappearance of nuclear membrane?`,
+opts:[
+"Prophase",
+"Metaphase",
+"Anaphase",
+"Telophase"
+],
+ans:3,
+sol:"Nuclear membrane reforms during telophase.",
+topic:"Mitosis",
+year:"PYQ"
+},
+
+{
+q:`Assertion (A): Enzymes are biological catalysts.
+Reason (R): Enzymes increase activation energy of reaction.`,
+opts:[
+"A true R false",
+"Both true",
+"Both false",
+"A false R true"
+],
+ans:0,
+sol:"Enzymes decrease activation energy.",
+topic:"Biomolecules",
+year:"PYQ Inspired"
+}
 ];
