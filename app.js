@@ -1,7 +1,7 @@
 // ========== CONFIG ==========
 // Replace these with your actual Supabase credentials
 const SUPABASE_URL = 'https://mavjmwvyjssbhlhawzsj.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_iRgJ9tqo29yiyH33nhzdRQ_UqG7WbqZ';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hdmptd3Z5anNzYmhsaGF3enNqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MzYyNDUsImV4cCI6MjA5NTQxMjI0NX0.ci3J54PLIt9NNPUR-GdIzPPDPv20om46G8TNPLdS7aw';
 
 let sb = null;
 try {
